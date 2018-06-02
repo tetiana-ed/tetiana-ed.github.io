@@ -35,10 +35,10 @@
       "company": "KindGeek",
       "location": "Lviv, Ukraine",
       "duties": [
-        "Writing scrapers to collect the pricing data from stores, retailers, and delivery platforms.",
-        "Building out the database schema.",
-        "Working with Big Data.",
-        "Building out an internal and external API's."
+        "Wrote scrapers to collect the pricing data from stores, retailers, and delivery platforms.",
+        "Built out the database schema.",
+        "Worked with Big Data.",
+        "Built out an internal and external APIs."
       ]
     },
     {
@@ -48,20 +48,20 @@
       "company": "SoftServe",
       "location": "Lviv, Ukraine",
       "duties": [
-        "Developing robust financial technology platform with a full spectrum of financing options that connects retailers with multiple lenders.",
-        "Working on the application that allows both Lenders and Channel Partners to support multiple parties to a transaction with a single integration effort.",
-        "Implementation of new features.",
-        "Bugs fixing.",
+        "Developed robust financial technology platform with a full spectrum of financing options that connects retailers with multiple lenders.",
+        "Worked on the application that allows both Lenders and Channel Partners to support multiple parties to a transaction with a single integration effort.",
+        "Implemented new features.",
+        "Fixed bugs.",
         "Requirements analysis and clarification.",
-        "Writing unit tests."
+        "Wrote unit tests."
       ]
     }
   ],
   "educations": [
     {
-      "degree": "Bachelor of Science: Animation and Game Development",
+      "degree": "Bachelor of Science: Software Engineer",
       "startDate": "May 2017",
-      "endDate": null,
+      "endDate": "present",
       "school": "Utah Valley University",
       "location": "Orem, UT"
     },
