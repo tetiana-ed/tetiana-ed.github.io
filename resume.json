@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "Tetiana Novikova",
+    "phone": "(385) 123-4567",
+    "email": "test.test@gmail.com"
+  },
+  "objective": "Combined different programming paradigms (object-oriented programming, functional programming) to achieve better code quality and maintainability. Open to learning new languages and technologies. Always looking for the best way to solve the problem and get things done.",
+  "techSkills": [
+    {
+      "category": "Languages",
+      "skills": ["Scala", "Python", "JavaScript", "C", "C++"]
+    },
+    {
+      "category": "Technologies",
+      "skills": ["Akka", "Kafka", "Play!", "jQuery"]
+    },
+    {
+      "category": "Databases",
+      "skills": ["MySQL", "RethinkDB", "Cassandra"]
+    },
+    {
+      "category": "Systems",
+      "skills": ["Linux", "OS X", "Windows"]
+    },
+    {
+      "category": "Tools",
+      "skills": ["git", "sbt", "JIRA"]
+    }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Scala Software Engineer",
+      "startDate": "January 2016",
+      "endDate": "May 2016",
+      "company": "KindGeek",
+      "location": "Lviv, Ukraine",
+      "duties": [
+        "Writing scrapers to collect the pricing data from stores, retailers, and delivery platforms.",
+        "Building out the database schema.",
+        "Working with Big Data.",
+        "Building out an internal and external API's."
+      ]
+    },
+    {
+      "jobTitle": "Scala Software Engineer",
+      "startDate": "September 2014",
+      "endDate": "January 2016",
+      "company": "SoftServe",
+      "location": "Lviv, Ukraine",
+      "duties": [
+        "Developing robust financial technology platform with a full spectrum of financing options that connects retailers with multiple lenders.",
+        "Working on the application that allows both Lenders and Channel Partners to support multiple parties to a transaction with a single integration effort.",
+        "Implementation of new features.",
+        "Bugs fixing.",
+        "Requirements analysis and clarification.",
+        "Writing unit tests."
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "degree": "Bachelor of Science: Animation and Game Development",
+      "startDate": "May 2017",
+      "endDate": null,
+      "school": "Utah Valley University",
+      "location": "Orem, UT"
+    },
+    {
+      "degree": "Bachelor of Science: System Analysis",
+      "startDate": "September 2011",
+      "endDate": "June 2015",
+      "school": "Lviv Polytechnic National University",
+      "location": "Lviv, Ukraine"
+    }
+  ]
+}
