@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "Tetiana Novikova",
+    "phone": "(385) 123-4567",
+    "email": "urna.nisi@gmail.com"
+  },
+  "objective": "In diam ante fringilla (donec-ac tincidunt, enim quis) aenean sem lacus aliquet at ipsum eu. Quisque a faucibus est eu interdum tortor. Maecenas ut pellentesque felis duis iaculis luctus imperdiet vestibulum molestie id lacus at semper.",
+  "techSkills": [
+    {
+      "category": "Aliquam",
+      "skills": ["Porta", "Mauris", "Cras", "Ac", "U++"]
+    },
+    {
+      "category": "Phasellus",
+      "skills": ["Pulvinar", "Sem", "Accumsan!", "Lacus"]
+    },
+    {
+      "category": "Vestibulum",
+      "skills": ["Curabitur", "Vivamus", "Quisque"]
+    },
+    {
+      "category": "Donec",
+      "skills": ["Aenean", "Donec non", "Vitae"]
+    },
+    {
+      "category": "Magna",
+      "skills": ["odio", "sapien", "EGET"]
+    }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Placerat Aliquet Sapien",
+      "startDate": "Sollicitudin 2016",
+      "endDate": "Nulla 2016",
+      "company": "Aliquam",
+      "location": "Maecenas, Odio",
+      "duties": [
+        "Nam accumsan lorem in diam rhoncus quis maximus, ex, convallis, mauris porta lacinia.",
+        "Duis auctor mauris non sollicitudin.",
+        "Pretium lacus Quis Vestibulum.",
+        "Aliquet eget nibh et facilisis auctor Augue."
+      ]
+    },
+    {
+      "jobTitle": "Suspendisse Et Pharetra",
+      "startDate": "Curabitur 2014",
+      "endDate": "Pellentesque 2016",
+      "company": "Donec",
+      "location": "Commodo, Etiam",
+      "duties": [
+        "Nam non tincidunt velit praesent diam arcu pretium eget elementum vitae dignissim a dolor curabitur egestas dictum arcu.",
+        "Fusce vehicula ex id eros volutpat nec Tempus velit Gravida Suspendisse at eros nec augue aliquam dictum etiam erat eros interdum in euismod.",
+        "Phasellus interdum felis.",
+        "Amet consequat.",
+        "Dolor mi ultricies nunc.",
+        "Porttitor ipsum tortor."
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "degree": "Quisque vel Tortor: Quisque Fringilla",
+      "startDate": "Turpis 2017",
+      "endDate": "lacinia",
+      "school": "Maximus Dignissim Tempus",
+      "location": "Libero, MI"
+    },
+    {
+      "degree": "Vivamus nec Condimentum: Lobortis Porttitor",
+      "startDate": "Lectus 2011",
+      "endDate": "Sed 2015",
+      "school": "Proin Vel Metus Purus",
+      "location": "Lectus, Lobortis"
+    }
+  ]
+}
