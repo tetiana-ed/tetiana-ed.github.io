@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Libraries Battle!</title>
+</head>
+<body class="has-background-light has-text-dark">
+  <section class="hero is-dark is-medium">
+    <div class="hero-body has-text-light">
+      <div class="container has-text-centered">
+        <h1 class="title is-2 is-uppercase">Libraries Battle</h1>
+        <h2 class="subtitle has-text-primary is-uppercase">&#x1F4AA; Who's stronger?  &#x1f914; </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium">
+    <div class="container">
+      <form action="" method="GET">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="libraries field is-grouped">
+              <p class="control">
+                <a class="remove button is-dark is-large has-text-primary">–</a>
+              </p>
+              <p class="control is-expanded">
+                <input class="library input is-primary is-large has-text-dark has-text-centered" name="libs" type="text">
+              </p>
+              <p class="control button is-light is-large is-static has-text-black" disabled>vs</p>
+              <p class="control is-expanded">
+                <input class="library input is-primary is-large has-text-dark has-text-centered" name="libs" type="text">
+              </p>
+              <p class="control button is-light is-large is-static has-text-black" disabled>vs</p>
+              <p class="control is-expanded">
+                <input class="library input is-primary is-large has-text-dark has-text-centered" name="libs" type="text">
+              </p>
+              <p class="control">
+                <a class="add button is-dark is-large has-text-primary">+</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal"></div>
+        <div class="field is-horizontal"></div>
+
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control is-expanded">
+                  <button type="submit" class="button is-primary is-large is-fullwidth has-text-dark">GO!</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="result container is-hidden">
+        <div class="columns"></div>
+        <div class="container">
+          <button type="submit" class="button back is-primary is-large is-fullwidth has-text-dark">TRY AGAIN!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer has-background-dark">
+    <div class="tags has-addons is-pulled-right">
+      <span class="tag is-dark">Tetiana Novikova</span>
+      <a class="tag is-dark" href="https://github.com/novikovaTanya"><i class="fab fa-github is-medium"></i></a>
+      <span class="tag is-dark">2018</span>
+    </div>
+  </footer>
+</body>
+<script>
+  var MAX = 5;
+  var MIN = 2;
+  var LIBS = ['bootstrap', 'bulma', 'foundation'];
+  var API = 'https://api.npms.io/v2/package/';
+
+  $(function() {
+    checkForLibs();
+
+    // TODO: delete (for testing purposes)
+    populateTestLibs();
+
+    $('.add').click(addInput);
+    $('.remove').click(removeInput);
+    $('.back').click(goBack);
+  });
+
+  function checkForLibs() {
+    var url = window.location.search;
+    if(url.length) {
+      $(url
+        .split(/[\?\&]libs=(\w*)/g)
+        .filter(el => el.length > 0))
+        .each((_, lib) => $.getJSON(API + lib.trim(), getScore).fail(errorHandler));
+      $('form').toggleClass('is-hidden');
+      $('.result').toggleClass('is-hidden');
+    };
+  }
+
+  var errorHandler = (jqXHR, textStatus, error) => {
+    console.log($.parseJSON(jqXHR.responseText).message);
+  }
+
+  var getScore = res => {
+    var score = res.score.final.toFixed(2) * 100;
+    var $libScore = $('<p />').addClass('title has-text-dark is-1').text(score);
+    var $libTitle = $('<p />').addClass('subtitle is-5 is-uppercase').text(res.collected.metadata.name);
+    var $scoreBar = $('<progress max="100"/>').addClass('progress subtitle is-large is-primary').attr('value', score);
+
+    $('.result .columns')
+      .append($('<div />')
+        .addClass('column has-text-centered')
+        .append($('<div />')
+          .addClass('card')
+          .append($('<div />')
+            .addClass('card-content')
+            .append($libScore, $libTitle, $scoreBar))));
+  };
+
+  var populateTestLibs = _ => $('.library').each((i, lib) => $(lib).attr('value', LIBS[i]));
+
+  var addInput = _ =>
+    ($('.library').length < MAX) ? $('.libraries .control:last').before(vsElement(), libElement('')) : warning();
+
+  var removeInput = _ =>
+    ($('.library').length > MIN) ? $('.libraries .control.is-expanded:last, .libraries .control.button:last').remove() : warning();
+
+  var warning = _ => console.log('You can\'t add more than ' + MAX + ' and less than ' + MIN + ' items');
+
+  var vsElement = _ =>
+    $('<p disabled/>')
+      .addClass('control button is-light is-large is-static has-text-black')
+      .text('vs');
+
+  var libElement = _ =>
+    $('<p />')
+      .addClass('control is-expanded')
+      .append($('<input>')
+        .addClass('library input is-primary is-large has-text-dark has-text-centered')
+        .attr('type', 'text')
+        .attr('name', 'libs'));
+
+  var goBack = _ => location.href = location.pathname;
+</script>
+</html>
